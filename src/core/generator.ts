@@ -3,6 +3,10 @@ import { generateLayoutUtilities } from '../utilities/layout';
 import { generateTypographyUtilities } from '../utilities/typography';
 import { generateBorderUtilities } from '../utilities/borders';
 import { generateEffectsUtilities } from '../utilities/effects';
+import { generateResponsiveUtilities } from '../plugins/responsive';
+import { generateDisplayUtilities } from '../plugins/display';
+import { generateAlignmentUtilities } from '../plugins/alignment';
+import { generateSpacingAddonUtilities } from '../plugins/spacing-addons';
 
 export class BanglishGenerator {
   private config: BanglishConfig;
@@ -87,6 +91,10 @@ ${generateLayoutUtilities(this.prefix)}
 ${generateTypographyUtilities(this.prefix, this.config.theme.fontSize)}
 ${generateBorderUtilities(this.prefix)}
 ${generateEffectsUtilities(this.prefix)}
+${generateDisplayUtilities(this.prefix)}
+${generateAlignmentUtilities(this.prefix)}
+${generateSpacingAddonUtilities(this.prefix, this.config.theme.spacing)}
+${generateResponsiveUtilities(this.generateSpacingUtilities() + this.generateColorUtilities() + generateLayoutUtilities(this.prefix) + generateTypographyUtilities(this.prefix, this.config.theme.fontSize) + generateBorderUtilities(this.prefix) + generateEffectsUtilities(this.prefix) + generateDisplayUtilities(this.prefix) + generateAlignmentUtilities(this.prefix) + generateSpacingAddonUtilities(this.prefix, this.config.theme.spacing), this.config.theme.screens, this.prefix)}
     `.trim();
   }
 }
