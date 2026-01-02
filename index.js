@@ -6,7 +6,7 @@ const { BanglishBuildSystem } = require('./lib/core/build-system');
 const { BanglishConfig } = require('./lib/core/types');
 
 module.exports = {
-  BanglishGenerator,
-  BanglishBuildSystem,
-  BanglishConfig
+    BanglishGenerator,
+    BanglishBuildSystem,
+    BanglishConfig
 };

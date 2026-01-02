@@ -5,8 +5,8 @@ export class CSSProcessor {
   static addVendorPrefixes(css: string): string {
     // This is a simplified approach - in a real system we'd use autoprefixer
     return css
-      .replace(/(display:\s*flex;)/g, '$1\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;')
-      .replace(/(box-shadow:\s*[^;]+;)/g, '$1\n  -webkit-box-shadow: $1;');
+      .replace(/(display:\s*flex;)/g, 'display: -webkit-box;\ndisplay: -ms-flexbox;\ndisplay: flex;')
+      .replace(/(box-shadow:\s*[^;]+;)/g, '$1');
   }
   
   // Simple minification

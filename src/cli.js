@@ -5,20 +5,20 @@ const path = require('path');
 const { BanglishGenerator } = require('../lib/core/generator');
 
 function main() {
-  const args = process.argv.slice(2);
-  const command = args[0];
+    const args = process.argv.slice(2);
+    const command = args[0];
 
-  if (command === 'build') {
-    console.log('🚀 Building Banglish Tailwind...');
-    // Import and run the build system
-    const { BanglishBuildSystem } = require('../lib/core/build-system');
-    const config = require('../banglish.config');
-    const buildSystem = new BanglishBuildSystem(config);
-    buildSystem.build();
-  } else if (command === 'init') {
-    console.log('📁 Initializing Banglish config...');
-    // Create a default configuration file
-    const configContent = `// Banglish Tailwind Configuration
+    if (command === 'build') {
+        console.log('🚀 Building Banglish Tailwind...');
+        // Import and run the build system
+        const { BanglishBuildSystem } = require('../lib/core/build-system');
+        const config = require('../banglish.config');
+        const buildSystem = new BanglishBuildSystem(config);
+        buildSystem.build();
+    } else if (command === 'init') {
+        console.log('📁 Initializing Banglish config...');
+        // Create a default configuration file
+        const configContent = `// Banglish Tailwind Configuration
 module.exports = {
   theme: {
     colors: {
@@ -84,14 +84,14 @@ module.exports = {
   }
 };
 `;
-    
-    fs.writeFileSync('banglish.config.js', configContent);
-    console.log('✅ Configuration file created: banglish.config.js');
-  } else if (command === 'version') {
-    const packageJson = require('../package.json');
-    console.log('Banglish Tailwind Framework v' + packageJson.version);
-  } else {
-    console.log(`
+
+        fs.writeFileSync('banglish.config.js', configContent);
+        console.log('✅ Configuration file created: banglish.config.js');
+    } else if (command === 'version') {
+        const packageJson = require('../package.json');
+        console.log('Banglish Tailwind Framework v' + packageJson.version);
+    } else {
+        console.log(`
 Banglish Tailwind CLI
 
 Commands:
@@ -100,7 +100,7 @@ Commands:
   version   Show version information
   help      Show this help message
     `);
-  }
+    }
 }
 
 main();

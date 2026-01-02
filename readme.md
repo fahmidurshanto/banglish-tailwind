@@ -6,6 +6,88 @@ Framework Language: Banglish (e.g., bhitor for padding, pichhon for background)
 Build Instructions: English (for IDE agents/automation)
 Target Audience: Bengali-speaking developers worldwide
 
+INSTALLATION
+To install the Banglish Tailwind Framework in your project:
+
+npm install banglish-tailwind
+
+Or using yarn:
+
+yarn add banglish-tailwind
+
+USAGE IN PROJECT
+After installation, you can include the framework in your project in several ways:
+
+HTML Link
+<link rel="stylesheet" href="node_modules/banglish-tailwind/dist/banglish.css">
+
+Or for minified version:
+<link rel="stylesheet" href="node_modules/banglish-tailwind/dist/banglish.min.css">
+
+CDN (For quick testing)
+<link href="https://unpkg.com/banglish-tailwind@latest/dist/banglish.css" rel="stylesheet">
+
+CONFIGURATION
+Initialize a configuration file with default settings:
+
+npx banglish-tailwind init
+
+This creates a banglish.config.js file with default Banglish theme settings.
+
+BUILDING YOUR PROJECT
+To build the framework with your custom configuration:
+
+npx banglish-tailwind build
+
+BANGLISH CLASS NAME REFERENCE
+Core Utilities Mapping:
+Category	English (Tailwind)	Banglish (Our)	Example
+Spacing	p-4	bhitor-4	bl-bhitor-4
+Spacing	m-4	bahire-4	bl-bahire-4
+Colors	bg-red-500	pichhon-lal-500	bl-pichhon-lal-500
+Colors	text-white	likha-shada	bl-likha-shada
+Layout	flex	flex	bl-flex
+Layout	justify-center	justify-majhe	bl-justify-majhe
+Typography	text-center	likha-majhe	bl-likha-majhe
+Borders	rounded	gol	bl-gol
+Effects	shadow	chaya	bl-chaya
+
+Directional Terms:
+ustu = Top
+niche = Bottom
+bam = Left
+dan = Right
+majhe = Center/Middle
+shuru = Start
+shesh = End
+
+RESPONSIVE BREAKPOINTS
+The framework includes responsive breakpoints using Banglish terms:
+choto = Small (640px)
+majhari = Medium (768px)
+boro = Large (1024px)
+khub-boro = Extra large (1280px)
+
+Example:
+<div class="bl-bhitor-4 choto:bl-bhitor-2 majhari:bl-bhitor-6">
+  Responsive padding
+</div>
+
+CLI COMMANDS
+The framework includes a CLI tool with the following commands:
+
+banglish-tailwind build    # Generate CSS files
+banglish-tailwind init     # Create configuration file
+banglish-tailwind version  # Show version information
+
+CUSTOMIZATION
+To customize the framework, modify the banglish.config.js file after running the init command. You can change:
+- Color palette
+- Spacing scale
+- Breakpoints
+- Font sizes
+- And other theme properties
+
 BUILD STEPS (FOR IDE AGENTS)
 PHASE 1: INITIAL SETUP
 Step 1: Create Project Structure
@@ -96,13 +178,13 @@ module.exports = {
       bishal: '1.5rem'
     }
   },
-  
+
   // Class name prefix
   prefix: 'bl-',
-  
+
   // Output mode
   mode: 'jit',
-  
+
   // Enable/disable core plugins
   corePlugins: {
     preflight: true,
@@ -531,36 +613,24 @@ Layout	justify-center	justify-majhe	bl-justify-majhe
 Typography	text-center	likha-majhe	bl-likha-majhe
 Borders	rounded	gol	bl-gol
 Effects	shadow	chaya	bl-chaya
+
 Directional Terms:
 ustu = Top
-
 niche = Bottom
-
 bam = Left
-
 dan = Right
-
 majhe = Center/Middle
-
 shuru = Start
-
 shesh = End
 
 NEXT DEVELOPMENT STEPS
 Add more utility categories (Typography, Borders, Effects)
-
 Implement JIT (Just-In-Time) compilation
-
 Create VS Code extension for IntelliSense
-
 Build React/Vue component libraries
-
 Add plugin system for extensibility
-
 Create comprehensive documentation in Bengali
-
 Set up automated testing pipeline
-
 Publish to npm registry
 
 BUILD COMMANDS SUMMARY
