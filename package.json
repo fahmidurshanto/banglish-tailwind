@@ -1,7 +1,7 @@
 {
   "name": "banglish-tailwind",
-  "version": "1.0.0",
-  "description": "Banglish Tailwind Framework - Build Guide 🇧🇩\r Project Overview\r A utility-first CSS framework with Banglish (Bengali-English) class names, designed specifically for Bangladeshi developers.",
+  "version": "0.1.0",
+  "description": "A utility-first CSS framework with Banglish (Bengali-English) class names, designed specifically for Bangladeshi developers.",
   "main": "index.js",
   "directories": {
     "example": "examples",

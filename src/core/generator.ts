@@ -1,4 +1,8 @@
 import { BanglishConfig } from './types';
+import { generateLayoutUtilities } from '../utilities/layout';
+import { generateTypographyUtilities } from '../utilities/typography';
+import { generateBorderUtilities } from '../utilities/borders';
+import { generateEffectsUtilities } from '../utilities/effects';
 
 export class BanglishGenerator {
   private config: BanglishConfig;
@@ -79,6 +83,10 @@ export class BanglishGenerator {
 
 ${this.generateSpacingUtilities()}
 ${this.generateColorUtilities()}
+${generateLayoutUtilities(this.prefix)}
+${generateTypographyUtilities(this.prefix, this.config.theme.fontSize)}
+${generateBorderUtilities(this.prefix)}
+${generateEffectsUtilities(this.prefix)}
     `.trim();
   }
 }

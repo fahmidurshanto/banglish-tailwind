@@ -5,17 +5,17 @@ const path = require('path');
 const { BanglishGenerator } = require('./core/generator');
 
 function main() {
-  const args = process.argv.slice(2);
-  const command = args[0];
-  
-  if (command === 'build') {
-    console.log('🚀 Building Banglish Tailwind...');
-    // Build logic here
-  } else if (command === 'init') {
-    console.log('📁 Initializing Banglish config...');
-    // Initialize config
-  } else {
-    console.log(`
+    const args = process.argv.slice(2);
+    const command = args[0];
+
+    if (command === 'build') {
+        console.log('🚀 Building Banglish Tailwind...');
+        // Build logic here
+    } else if (command === 'init') {
+        console.log('📁 Initializing Banglish config...');
+        // Initialize config
+    } else {
+        console.log(`
 Banglish Tailwind CLI
 
 Commands:
@@ -24,7 +24,7 @@ Commands:
   version   Show version information
   help      Show this help message
     `);
-  }
+    }
 }
 
 main();
