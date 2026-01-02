@@ -1,0 +1,31 @@
+# Development files
+*.md
+.git/
+.github/
+.editorconfig
+.eslintrc*
+.prettier*
+.vscode/
+.idea/
+
+# Build source (we only distribute the compiled output)
+src/
+tests/
+*.test.ts
+*.test.js
+
+# Configuration for development only
+tsconfig.json
+tsconfig.test.json
+jest.config.js
+postcss.config.js
+
+# Temporary files
+*.log
+.nyc_output/
+coverage/
+.env
+.DS_Store
+Thumbs.db
+
+# We keep dist/ for the built CSS files, lib/ for compiled JS, and node_modules/ is not included anyway

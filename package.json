@@ -2,7 +2,7 @@
   "name": "banglish-tailwind",
   "version": "0.1.0",
   "description": "A utility-first CSS framework with Banglish (Bengali-English) class names, designed specifically for Bangladeshi developers.",
-  "main": "index.js",
+  "main": "./index.js",
   "bin": {
     "banglish-tailwind": "./src/cli.js"
   },
@@ -19,9 +19,9 @@
     "format": "prettier --write \"src/**/*.ts\"",
     "build:css": "postcss src/**/*.css -o dist/banglish.css"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": ["css", "framework", "tailwind", "bangla", "banglish", "utility", "responsive", "design"],
+  "author": "Banglish Community",
+  "license": "MIT",
   "type": "commonjs",
   "dependencies": {
     "autoprefixer": "^10.4.23",
